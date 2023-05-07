@@ -84,7 +84,7 @@ abstract class ClsObject
 	{
 		if (!is_array($value) && !is_object($value))
 		{
-			preg_match_all('/\$\$[\w-_]{1,}\$\$/',$value, $vars);
+			preg_match_all('/\$\$[\w\-_]{1,}\$\$/',$value, $vars);
 			foreach ($vars[0] as $var)
 			{
 				switch($var)

@@ -149,12 +149,14 @@ class ClsEvent
 	*/
 	function sendRequest($returnxml, $lastmulti = false, $multi = false)
 	{
+/*
 		if (!get_magic_quotes_gpc())
 		{
 			$_REQUEST = $this->addSlashes($_REQUEST);
 			$_POST = $this->addSlashes($_POST);
 			$_GET = $this->addSlashes($_GET);
 		}
+*/
 		$objname = isset($_POST['dsobjname']) ? $_POST['dsobjname'] : false;
 		if(isset($_POST["data"]))
 		{	

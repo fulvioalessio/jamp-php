@@ -73,8 +73,10 @@ class ClsSystem
 		require_once($this->dir_real_jamp."/class/event.class.php");
 		LANG::$language = LANGUAGE;
 		new ClsException();
-		session_cache_limiter('private'); 
-		if (!isset($_SESSION)) session_start();
+		if (!isset($_SESSION)) {
+			session_cache_limiter('private'); 
+			session_start();
+		}
 	}
 
 	/** 

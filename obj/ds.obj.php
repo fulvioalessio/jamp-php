@@ -350,7 +350,7 @@ class ClsObj_ds extends ClsObject {
 		if ($this->property["readonly"]["value"]=="true") return;
 		foreach ($post as $name => $ps)
 		{
-		  if (preg_match_all('/\$\$[\w-_]{1,}\$\$/',$name, $vars)) unset($post[$name]);
+		  if (preg_match_all('/\$\$[\w\-_]{1,}\$\$/',$name, $vars)) unset($post[$name]);
 		}
 		$pre = $this->ds->property["where"];
 		$this->ds->property["where"] = array();
@@ -423,7 +423,7 @@ class ClsObj_ds extends ClsObject {
 		if ($this->property["readonly"]["value"]=="true") return;
 		foreach ($post as $name => $ps)
 		{
-		  if (preg_match_all('/\$\$[\w-_]{1,}\$\$/',$name, $vars)) unset($post[$name]);
+		  if (preg_match_all('/\$\$[\w\-_]{1,}\$\$/',$name, $vars)) unset($post[$name]);
 		}
 		$pre = $this->ds->property["where"];
 		$this->ds->property["where"] = array();
